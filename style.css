@@ -1,0 +1,974 @@
+/* ===============================
+   ETERNAL ELEGANCE WEDDING STYLING
+   Main stylesheet
+================================ */
+
+/* ពណ៌ក្ដារលាយ (Color palette) */
+:root {
+    --rose-gold: #b77b70;
+    --rose-dark: #925c53;
+    --blush: #f8e9e6;
+    --cream: #fffaf5;
+    --champagne: #d9bd8c;
+    --charcoal: #3c3432;
+    --text: #746764;
+    --white: #ffffff;
+    --border: #eadbd5;
+    --shadow: 0 10px 35px rgba(60, 52, 50, 0.08);
+}
+.brand-logo-img {
+    height: 90px; /* កំណត់កម្ពស់តាមតម្រូវការ */
+    width: auto;   /* រក្សាទ្រង់ទ្រាយដើមរបស់រូបភាព */
+    object-fit: contain;
+}
+
+/* កំណត់ឡើងវិញ និងទម្រង់សកល */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    color: var(--text);
+    background: var(--cream);
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease, background 0.3s ease;
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Playfair Display", serif;
+    color: var(--charcoal);
+    font-weight: 500;
+    line-height: 1.25;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+}
+
+h2 {
+    font-size: clamp(1.8rem, 3vw, 2.7rem);
+}
+
+h3 {
+    font-size: 1.45rem;
+}
+
+.container {
+    width: min(1180px, 90%);
+    margin: 0 auto;
+}
+
+.section-padding {
+    padding: 75px 0;
+}
+
+.eyebrow {
+    color: var(--rose-gold);
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.eyebrow.light {
+    color: var(--champagne);
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-heading h2 {
+    margin-top: 8px;
+}
+
+.section-description {
+    max-width: 680px;
+    margin: 22px auto;
+}
+
+.center {
+    text-align: center;
+    margin-top: 35px;
+}
+
+/* ប៊ូតុង (Buttons) */
+.btn {
+    display: inline-block;
+    padding: 14px 30px;
+    background: var(--rose-gold);
+    color: var(--white);
+    border: 1px solid var(--rose-gold);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: var(--rose-dark);
+    border-color: var(--rose-dark);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--rose-gold);
+}
+
+.btn-outline:hover {
+    color: var(--white);
+}
+
+.btn-small {
+    padding: 10px 20px;
+    font-size: 0.65rem;
+}
+
+.btn-full {
+    width: 100%;
+}
+
+/* ===============================
+   ក្បាលទំព័រ និងការរុករក (HEADER & NAVIGATION)
+================================ */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 250, 245, 0.97);
+    border-bottom: 1px solid var(--border);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.site-header.scrolled {
+    background: rgba(255, 250, 245, 0.98);
+    box-shadow: var(--shadow);
+}
+
+.nav-container {
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.brand-icon {
+    font-size: 2.5rem;
+    color: var(--rose-gold);
+    line-height: 1;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.3;
+}
+
+.brand-text strong {
+    font-family: "Playfair Display", serif;
+    color: var(--charcoal);
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.brand-text small {
+    color: var(--rose-gold);
+    font-size: 0.55rem;
+    letter-spacing: 3px;
+    margin-top: 5px;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-list > li {
+    position: relative;
+}
+
+.nav-list > li > a {
+    display: block;
+    color: var(--charcoal);
+    font-size: 0.72rem;
+    font-weight: 500;
+    padding: 15px 0;
+}
+
+.nav-list > li > a:hover {
+    color: var(--rose-gold);
+}
+
+.arrow {
+    margin-left: 4px;
+    color: var(--rose-gold);
+}
+
+/* ម៉ឺនុយទម្លាក់ចុះ (Dropdown menu) */
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: -15px;
+    min-width: 230px;
+    background: var(--white);
+    box-shadow: var(--shadow);
+    border-top: 2px solid var(--rose-gold);
+    padding: 12px 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.25s ease;
+}
+
+.dropdown li a {
+    display: block;
+    padding: 10px 20px;
+    font-size: 0.72rem;
+}
+
+.dropdown li a:hover {
+    background: var(--blush);
+    color: var(--rose-dark);
+}
+
+.has-dropdown:hover .dropdown,
+.has-dropdown:focus-within .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.menu-toggle {
+    display: none;
+    border: 0;
+    background: none;
+    padding: 8px;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    margin: 5px 0;
+    background: var(--charcoal);
+    transition: all 0.3s ease;
+}
+
+/* ===============================
+   ផ្នែកហេរ៉ូ (HERO)
+================================ */
+.hero {
+    min-height: 680px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background:
+        url("../photo/photo05.jpg")
+        center 55% / cover no-repeat;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(35, 27, 25, 0.72),
+        rgba(35, 27, 25, 0.20)
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    color: var(--white);
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.hero h1 {
+    color: var(--white);
+    margin-bottom: 25px;
+}
+
+.hero-description {
+    max-width: 510px;
+    font-size: 1rem;
+    margin-bottom: 35px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-scroll {
+    position: absolute;
+    z-index: 2;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--white);
+    font-size: 1.8rem;
+}
+
+/* ===============================
+   ប្លង់មេ (MAIN LAYOUT)
+================================ */
+.content-section {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 330px;
+    gap: 55px;
+    align-items: start;
+}
+
+.main-content {
+    min-width: 0;
+}
+
+.intro {
+    text-align: center;
+}
+
+.intro h2 {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* សេវាកម្ម (Services) */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.service-card {
+    background: var(--white);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.service-card img {
+    height: 220px;
+    transition: transform 0.5s ease;
+}
+
+.service-card:hover img {
+    transform: scale(1.04);
+}
+
+.service-card-content {
+    padding: 24px 20px;
+}
+
+.service-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    font-size: 0.8rem;
+    margin-bottom: 18px;
+}
+
+.text-link {
+    color: var(--rose-gold);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.text-link:hover {
+    color: var(--rose-dark);
+}
+
+/* កញ្ចប់សេវាកម្ម (Packages) */
+.package-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    align-items: stretch;
+}
+
+.package-card {
+    position: relative;
+    background: var(--white);
+    padding: 35px 25px;
+    border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+}
+
+.package-card.featured {
+    border: 2px solid var(--rose-gold);
+    box-shadow: var(--shadow);
+}
+
+.package-label {
+    color: var(--rose-gold);
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.package-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.package-description {
+    font-size: 0.78rem;
+    margin-bottom: 25px;
+}
+
+.package-card ul {
+    margin-bottom: 30px;
+    flex-grow: 1;
+}
+
+.package-card li {
+    font-size: 0.75rem;
+    padding: 9px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.package-card li::before {
+    content: "✓";
+    color: var(--rose-gold);
+    margin-right: 8px;
+}
+
+.package-card .btn {
+    width: 100%;
+}
+
+.popular-label {
+    position: absolute;
+    top: -13px;
+    right: 15px;
+    background: var(--rose-gold);
+    color: var(--white);
+    padding: 5px 12px;
+    font-size: 0.58rem;
+    letter-spacing: 1px;
+}
+
+/* វិចិត្រសាល (Gallery) */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    display: block;
+}
+
+.gallery-item img {
+    height: 250px;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.06);
+}
+
+/* ===============================
+   បង្អួចចំហៀង (SIDEBAR)
+================================ */
+.sidebar {
+    padding-top: 75px;
+}
+
+.sidebar-widget {
+    background: var(--white);
+    padding: 30px 25px;
+    margin-bottom: 30px;
+    box-shadow: var(--shadow);
+}
+
+.sidebar-widget h2 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+
+.sidebar-widget > p:not(.eyebrow) {
+    font-size: 0.78rem;
+    margin-bottom: 20px;
+}
+
+/* ទម្រង់កក់សេវាកម្ម (Booking form) */
+.booking-widget form {
+    display: flex;
+    flex-direction: column;
+}
+
+.booking-widget label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--charcoal);
+    margin: 12px 0 6px;
+}
+
+.booking-widget input,
+.booking-widget select,
+.newsletter input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border);
+    background: var(--cream);
+    color: var(--charcoal);
+    outline: none;
+    font-size: 0.75rem;
+}
+
+.booking-widget input:focus,
+.booking-widget select:focus,
+.newsletter input:focus {
+    border-color: var(--rose-gold);
+}
+
+.booking-widget button {
+    margin-top: 22px;
+}
+
+/* មតិយោបល់ (Testimonials) */
+.stars {
+    color: var(--champagne);
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.testimonial-slide {
+    display: none;
+}
+
+.testimonial-slide.active {
+    display: block;
+    animation: fadeIn 0.4s ease;
+}
+
+.testimonial-slide blockquote {
+    font-family: "Playfair Display", serif;
+    font-size: 1.05rem;
+    font-style: italic;
+    color: var(--charcoal);
+    margin-bottom: 20px;
+}
+
+.client-name {
+    font-size: 0.72rem;
+    color: var(--rose-gold);
+    font-weight: 600;
+}
+
+.slider-controls {
+    display: flex;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.slider-btn {
+    width: 35px;
+    height: 35px;
+    border: 1px solid var(--border);
+    background: var(--cream);
+    color: var(--rose-gold);
+}
+
+.slider-btn:hover {
+    background: var(--rose-gold);
+    color: var(--white);
+}
+
+/* បណ្តាញសង្គម (Social links) */
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.social-links a {
+    padding: 10px 14px;
+    background: var(--cream);
+    border: 1px solid var(--border);
+    font-size: 0.75rem;
+}
+
+.social-links a:hover {
+    background: var(--blush);
+    color: var(--rose-dark);
+}
+
+/* ===============================
+   ផ្នែកហៅឱ្យធ្វើសកម្មភាព (CTA)
+================================ */
+.cta-section {
+    background:
+        linear-gradient(rgba(65, 45, 42, 0.78), rgba(65, 45, 42, 0.78)),
+        url("https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=1800&q=85")
+        center / cover no-repeat;
+    text-align: center;
+    padding: 100px 0;
+    color: var(--white);
+}
+
+.cta-content h2 {
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.cta-content > p:not(.eyebrow) {
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+/* ===============================
+   ជើងទំព័រ (FOOTER)
+================================ */
+.site-footer {
+    background: #332b29;
+    color: #d9ceca;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr 1.3fr;
+    gap: 45px;
+    padding-top: 75px;
+    padding-bottom: 65px;
+}
+
+.footer-brand {
+    margin-bottom: 25px;
+}
+
+.footer-brand .brand-text strong {
+    color: var(--white);
+}
+
+.footer-column h3 {
+    color: var(--white);
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.footer-column p,
+.footer-column li {
+    font-size: 0.72rem;
+    margin-bottom: 12px;
+}
+
+.footer-column li a:hover {
+    color: var(--champagne);
+}
+
+.contact-list li {
+    margin-bottom: 15px;
+}
+
+.newsletter form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.newsletter input {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: var(--white);
+}
+
+.newsletter input::placeholder {
+    color: #c5b7b2;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 20px 0;
+}
+
+.footer-bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-bottom p {
+    font-size: 0.65rem;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 12px;
+}
+
+.footer-socials a {
+    color: var(--champagne);
+    font-size: 0.65rem;
+    font-weight: 600;
+}
+
+.footer-socials a:hover {
+    color: var(--white);
+}
+
+/* ជំនួយការភាពងាយស្រួល (Accessibility helper) */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* ចលនា (Animations) */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===============================
+   ការរចនាស្របតាមអេក្រង់ (RESPONSIVE DESIGN)
+================================ */
+
+/* ថេប្លេត និងកុំព្យូទ័រយួរដៃខ្នាតតូច */
+@media (max-width: 1100px) {
+    .nav-list {
+        gap: 15px;
+    }
+
+    .content-section {
+        grid-template-columns: minmax(0, 1fr) 290px;
+        gap: 30px;
+    }
+
+    .service-grid,
+    .package-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* ម៉ឺនុយទូរស័ព្ទដៃ (Mobile navigation) */
+@media (max-width: 900px) {
+    .nav-container {
+        min-height: 75px;
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    .main-nav {
+        display: none;
+        width: 100%;
+        flex-basis: 100%;
+        padding-bottom: 20px;
+    }
+
+    .main-nav.active {
+        display: block;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    .nav-list > li > a {
+        padding: 12px 0;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .nav-cta {
+        margin-top: 15px;
+    }
+
+    .nav-cta .btn {
+        display: inline-block;
+        padding: 12px 25px;
+    }
+
+    .dropdown {
+        position: static;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        border-top: 0;
+        border-left: 2px solid var(--rose-gold);
+        margin: 0 0 10px 10px;
+        padding: 5px 0;
+    }
+
+    .dropdown-open .dropdown {
+        display: block;
+    }
+
+    .dropdown li a {
+        padding: 10px 15px;
+    }
+
+    .content-section {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        padding-top: 0;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .sidebar-widget {
+        margin-bottom: 0;
+    }
+
+    .booking-widget {
+        grid-row: span 2;
+    }
+
+    .hero {
+        min-height: 580px;
+    }
+}
+
+/* ទូរស័ព្ទដៃ (Phones) */
+@media (max-width: 600px) {
+    .container {
+        width: 92%;
+    }
+
+    .brand-text strong {
+        font-size: 1rem;
+    }
+
+    .brand-text small {
+        font-size: 0.48rem;
+        letter-spacing: 2px;
+    }
+
+    .hero {
+        min-height: 520px;
+        background-position: 60% center;
+    }
+
+    .hero h1 {
+        font-size: 2.6rem;
+    }
+
+    .hero-description {
+        font-size: 0.9rem;
+    }
+
+    .section-padding {
+        padding: 55px 0;
+    }
+
+    .service-grid,
+    .package-grid,
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card img {
+        height: 260px;
+    }
+
+    .gallery-item img {
+        height: 280px;
+    }
+
+    .sidebar {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-widget {
+        grid-row: auto;
+    }
+
+    .cta-section {
+        padding: 70px 0;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding-top: 55px;
+        padding-bottom: 45px;
+    }
+
+    .footer-bottom-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
